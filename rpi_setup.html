@@ -38,9 +38,31 @@ This file is written using [StrapDown JS](https://strapdownjs.com/) using the un
 		```
 	- need to create a [git token](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)
 		```
-		Personal token: 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 (must be removed)
-
+		Personal token: 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 (must be removed)
+		
+		Ensure no blank space after the token
 		```
+	- install [github cli](https://lindevs.com/install-github-cli-on-raspberry-pi/)
+		```
+		% GITHUB_CLI_VERSION=$(curl -s "https://api.github.com/repos/cli/cli/releases/latest" | gr
+		% cd ~/Downloads
+		% curl -Lo gh.deb "https://github.com/cli/cli/releases/latest/download/gh_${GITHUB_CLI_VERSION}_linux_armv6.deb"
+		% sudo dpkg -i gh.deb
+		% gh --version		# check the --version
+		% rm gh.deb         # remove the package
+		```
+	- check that the gh cli is working
+		```
+		% echo 'YOUR GITHUB API TOKEN' > github_token.txt
+		% gh auth login --with-token < github_token.txt
+		% gh auth status
+		% gh auth logout
+		```
+	- check login with token
+		```
+		% gh auth login --with-token < github_token.txt
+		```
+
 - python 3.9 is already installed
 
 
