@@ -63,6 +63,37 @@ This file is written using [StrapDown JS](https://strapdownjs.com/) using the un
 		% gh auth login --with-token < github_token.txt
 		```
 
+	- SSH keys 
+		```
+		# generate a new key pair
+		% ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+		# add the key to ssh-agent
+		% ssh-add ~/.ssh/id_rsa_key
+		# add the public key to the github account
+
+		# test your connection
+		% ssh -T git@github.com
+		Hi roddersg! You've successfully authenticated, but GitHub does not provide shell access.
+
+		# clone the repository
+		% git clone git@github.com:roddersg/rpi.git
+
+		```
+	- [Switching remote URLs from HTTPS to SSH](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#switching-remote-urls-from-https-to-ssh)
+		```
+		# check method of git, make sure not https, otherwise change
+		% git remote -v
+
+		# change to ssh
+		% git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+
+		# verify
+		% git remote -v 
+		origin	git@github.com:roddersg/rpi.git (fetch)
+		origin	git@github.com:roddersg/rpi.git (push)
+		```
+
 - python 3.9 is already installed
 
 
