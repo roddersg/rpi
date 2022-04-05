@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>RPi 4 Setup</title>
+
+<xmp theme="united" style="display:none;">
+<!-- Markdown goes below this line -->
+
+
+## Strapdown JS
+
+This file is written using [StrapDown JS](https://strapdownjs.com/) using the united-theme.
+
+
+## Installation Log
+
+- [Raspberry Pi OS Lite (64bit) Kernel 5.10, Debian 11 (Bullseye)](https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit)
+- xfce4 desktop
+	- xfce4
+	- xfce-goodies
+- Firefox (firefox-esr)
+- Chromium Brownser (chromium-browser)
+- [VS Code](https://code.visualstudio.com/docs/setup/raspberry-pi)
+- git (git)
+	- global configuration on client
+		```
+		% git config --global user.name "Rodney D"
+		% git config --global user.email "rodxxxxxx@gmail.com"
+		```
+	- create github repo, then clone into local
+		```
+		% git clone "https://github.com/rdorville/rpi"
+		```
+	- make ;changes to your repository, add to holding area then push
+		```
+		% git add . 
+		% git commit -m "add-a-informative-comment-here"
+		% git push
+		```
+	- need to create a [git token](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)
+		```
+		Personal token: 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 (must be removed)
+
+		```
+- python 3.9 is already installed
+
+
+
+
+
+<!-- Markdown goes above this line -->
+</xmp>
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
